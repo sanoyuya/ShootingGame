@@ -8,6 +8,7 @@ TagManager:
   - Bullet
   - PlayerBody
   - EnemyBullet
+  - AddEnemy
   layers:
   - Default
   - TransparentFX

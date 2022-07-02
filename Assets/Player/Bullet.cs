@@ -17,7 +17,7 @@ public class Bullet : MonoBehaviour
         Vector3 pos = transform.position;
 
         //上にまっすぐ飛ぶ
-        pos.z += 0.05f;
+        pos.z += 1f;
 
         //弾の移動
         transform.position = new Vector3(pos.x, pos.y, pos.z);
@@ -33,7 +33,7 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //もし当たったオブジェクトのタグがEnemyだったら
-        if (other.gameObject.tag == "Enemy")
+        if (other.gameObject.tag == "Enemy"|| other.gameObject.tag=="AddEnemy")
         {
             //当たったオブジェクトのEnemyスクリプトを呼び出してDamage関数を実行させる
             other.GetComponent<Enemy>().Damage();
